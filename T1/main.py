@@ -11,7 +11,6 @@ for i in range(nro_filas):
     listAdj.append([])
 
 heuristicas = dict()
-sdfds
 def Data():
     with open("grafo.txt","r") as graph:
         # Obtener los valores de  Init y Goal
