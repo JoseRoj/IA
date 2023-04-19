@@ -85,6 +85,7 @@ def ResultDFS(listadj,init,goal,nodesExpan):
             print(Nodes[value], end = " --> ")
         else:
             print(Nodes[value])
+    IsOptima(Path)
             
     # CALCULAR EL COSTO DE LA SOLUCION 
     for index in range(len(Path) - 1):
