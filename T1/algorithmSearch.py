@@ -65,13 +65,13 @@ def DFS(listadj,init,goal,visited,Reco,nodesExpan):
         #print(Nodes[goal])
         return True
     if(len(listadj[init]) == 0):
-        return
+        return  #Si llego al final volver
     #print(f"{Nodes[init]}",end= " --> ")
-    while(neighbors(listadj,init,visited) > 0): 
+    while(neighbors(listadj,init,visited) > 0): # Mientras le queden vecinos 
         nodo = random.randint(0,(len(listadj[init]) - 1))
         #print(listadj[init][nodo])
         if visited[listadj[init][nodo][0]] == 0: 
-            Reco[init] = listadj[init][nodo][0]
+            Reco[init] = listadj[init][nodo][0] ## Recordar camino
             #costo = costo + listadj[init][nodo][1]
             if(DFS(listadj,listadj[init][nodo][0],goal,visited,Reco,nodesExpan) == True): 
                 Path.insert(0,init)
